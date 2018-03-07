@@ -8,7 +8,7 @@ upgrade_common() {
 }
 
 upgrade_all() {
-  update_common
+  upgrade_common
   gem update --system
   gem update --no-document
   antigen selfupdate
