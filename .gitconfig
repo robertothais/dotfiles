@@ -1,0 +1,25 @@
+[user]
+  name = Roberto Thais
+  email = r@robertothais.org
+  signingkey = 0F2CDB872621F471
+[color]
+  ui = true
+[alias]
+  lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
+[push]
+  default = current
+[fetch]
+  prune = true
+[core]
+  editor = $VISUAL -w
+  pager = less -F -X
+  excludesfile = ~/.gitignore
+[rerere]
+  enabled = true
+[commit]
+  gpgsign = true
+[filter "lfs"]
+  required = true
+  clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
+  process = git-lfs filter-process

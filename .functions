@@ -1,0 +1,30 @@
+upgrade_common() {
+  brew update
+  brew upgrade --cleanup
+  brew cu -afy
+  brew cleanup
+  brew cask cleanup
+  npm -g update
+}
+
+upgrade_all() {
+  update_common
+  gem update --system
+  gem update --no-document
+  antigen selfupdate
+  antigen update
+  antigen cleanup
+}
+
+# git commit browser. needs fzf
+log() {
+  git log --color=always --format='%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' "$@" |
+    fzf --ansi --no-sort --reverse --tiebreak=index --toggle-sort=\` \
+      --bind "ctrl-m:execute:
+                echo '{}' | grep -o '[a-f0-9]\{7\}' | head -1 |
+                xargs -I % sh -c 'git show --color=always % | less -R'"
+}
+
+chrome() {
+  /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome "$@"
+}
