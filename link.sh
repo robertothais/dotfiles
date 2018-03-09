@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 yes() {
   [[ "$REPLY" =~ ^[Yy]$ ]] &&
     return 0 ||

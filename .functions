@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 upgrade_common() {
   brew update
   brew upgrade --cleanup
