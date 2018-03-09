@@ -47,7 +47,7 @@ print_success() {
   printf "[\e[0;32m OK \e[0m] $1\n"
 }
 
-declare -a DOTFILES=$(find . -type f -maxdepth 1 -name ".*" -not -name .DS_Store -not -name .git | sed -e 's|//|/|' | sed -e 's|./.|.|')
+declare -a DOTFILES=$(find . -type f -maxdepth 1 -name ".*" -not -name .DS_Store -not -name .git -not -name .macos | sed -e 's|//|/|' | sed -e 's|./.|.|')
 
 main() {
   local i=""
