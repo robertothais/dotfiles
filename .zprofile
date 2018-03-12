@@ -14,6 +14,6 @@ PATH=$PATH:$(go env GOPATH)/bin
 PATH=$HOME/.config/yarn/global/node_modules/.bin:$PATH
 PATH=node_modules/.bin:$PATH
 PATH=$HOME/.cargo/bin:$PATH
-PATH=~$CODE/bin:$PATH
+PATH=$CODE/bin:$PATH
 
 export PATH
