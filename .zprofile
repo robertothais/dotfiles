@@ -10,6 +10,8 @@ export GOPATH=$HOME/code/go
 
 export JAVA_HOME=$(/usr/libexec/java_home)
 
+export GPG_TTY=$(tty)
+
 PATH=$PATH:$(go env GOPATH)/bin
 PATH=$HOME/.config/yarn/global/node_modules/.bin:$PATH
 PATH=node_modules/.bin:$PATH
