@@ -12,7 +12,8 @@ export JAVA_HOME=$(/usr/libexec/java_home)
 
 export GPG_TTY=$(tty)
 
-PATH=$PATH:$(go env GOPATH)/bin
+PATH=$(go env GOPATH)/bin:$PATH
+PATH=/usr/local/opt/python/libexec/bin:$PATH
 PATH=$HOME/.config/yarn/global/node_modules/.bin:$PATH
 PATH=node_modules/.bin:$PATH
 PATH=$HOME/.cargo/bin:$PATH
