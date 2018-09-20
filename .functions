@@ -5,7 +5,6 @@ upgrade_common() {
   brew upgrade --cleanup
   brew cu -afy
   brew cleanup
-  brew cask cleanup
   npm -g update
 }
 
