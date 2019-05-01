@@ -2,7 +2,7 @@
 
 upgrade_common() {
   brew update
-  brew upgrade --cleanup
+  brew upgrade
   brew cu -afy
   brew cleanup
   npm -g update
